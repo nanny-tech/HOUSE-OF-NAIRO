@@ -1,0 +1,24 @@
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* space between logo and text */
+    padding: 10px 20px;
+  }
+  
+  .logo img {
+    width: 60px;
+    height: auto;
+    border-radius: 50%; /* optional: round logo */
+    object-fit: cover;
+    border: 2px solid #d4af37; /* gold outline */
+  }
+  
+  .brand-name {
+    font-size: 1.8rem;
+    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+    color: #d4af37; /* fancy gold tone */
+    letter-spacing: 1px;
+    text-transform: uppercase; /* optional: for stylish caps */
+  }
+  

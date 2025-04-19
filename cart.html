@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Cart</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      padding: 20px;
+      background: #fff8f8;
+    }
+    .cart-item {
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+    .total {
+      margin-top: 20px;
+      font-weight: bold;
+      font-size: 18px;
+    }
+    .back-btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 10px 20px;
+      background: #ff69b4;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🛍️ Your Cart</h1>
+
+  <p id="cart-message" style="color: green; font-weight: bold;"></p>
+
+  <div id="cart-container"></div>
+  <p class="total" id="total">Total: Rs. 0</p>
+  <a href="index.html" class="back-btn">← Continue Shopping</a>
+
+  <script>
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const container = document.getElementById("cart-container");
+    const totalDisplay = document.getElementById("total");
+    let total = 0;
+
+    if (cart.length === 0) {
+      container.innerHTML = "<p>Your cart is empty 😢</p>";
+    } else {
+      cart.forEach(item => {
+        const div = document.createElement("div");
+        div.className = "cart-item";
+        div.textContent = `${item.name} — Rs. ${item.price}`;
+        container.appendChild(div);
+        total += item.price;
+      });
+      totalDisplay.textContent = `Total: Rs. ${total}`;
+    }
+
+    function clearCart() {
+  localStorage.removeItem("cart");
+  document.getElementById("cart-message").textContent = "Cart has been emptied 🧹";
+  document.getElementById("cart-container").innerHTML = "<p>Your cart is empty 😢</p>";
+  document.getElementById("total").textContent = "Total: Rs. 0";
+}
+
+
+  </script>
+<button onclick="clearCart()" class="clear-btn">🗑️ Clear Cart</button>
+
+</body>
+</html>
