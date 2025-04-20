@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>House of Nairo</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #fff0f5;
+      height: 100vh;
+    }
+    .signup-box {
+      background: white;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      text-align: center;
+      width: 350px;
+    }
+    input, button {
+      margin: 10px 0;
+      padding: 10px;
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    p a {
+      color: #ff69b4;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="signup-box">
+    <h2>Create an Account</h2>
+    <input type="text" id="newUsername" placeholder="Username" />
+    <input type="password" id="newPassword" placeholder="Password" />
+    <button onclick="signup()">Sign Up</button>
+    <p id="signupMsg"></p>
+    <p>Already have an account? <a href="login.html">Login here</a></p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

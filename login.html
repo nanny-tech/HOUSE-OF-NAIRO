@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - House of Nairo</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #fff0f5;
+      height: 100vh;
+    }
+    .login-box {
+      background: white;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      text-align: center;
+      width: 350px;
+    }
+    input, button {
+      margin: 10px 0;
+      padding: 10px;
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    p a {
+      color: #ff69b4;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <h2>Welcome Back 💖</h2>
+    <input type="text" id="username" placeholder="Username" />
+    <input type="password" id="password" placeholder="Password" />
+    <button onclick="login()">Login</button>
+    <p id="loginError" style="color:red;"></p>
+    <p>New here? <a href="signup.html">Create account</a></p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
